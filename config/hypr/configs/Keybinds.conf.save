@@ -1,0 +1,199 @@
+# See https://wiki.hyprland.org/Configuring/Keywords/ for more
+# Setting variables
+$mainMod = SUPER
+$files = thunar
+$browser = firefox
+$term = foot
+$hyprDir = $HOME/.config/hypr
+$scriptsDir = $HOME/.config/hypr/scripts
+
+# Scripts
+$AirplaneMode = $scriptsDir/AirplaneMode.sh
+$backlight = $scriptsDir/Brightness.sh
+$kbacklight = $scriptsDir/BrightnessKbd.sh
+$ChangeBlur = $scriptsDir/ChangeBlur.sh
+$ChangeLayout = $scriptsDir/ChangeLayout.sh
+$ChangeLayoutMenu = $scriptsDir/ChangeLayoutMenu.sh
+$DarkLight = $scriptsDir/DarkLight.sh
+$GameMode = $scriptsDir/GameMode.sh
+$Help = $scriptsDir/Help.sh
+$LidSwitch = $scriptsDir/LidSwitch.sh
+$LockScreen = $scriptsDir/LockScreen.sh
+$Mako = $scriptsDir/Mako.sh
+$screenshot = $scriptsDir/ScreenShot.sh
+$touchpad = $scriptsDir/TouchPad.sh
+$volume = $scriptsDir/Volume.sh
+$wallpaper = $scriptsDir/Wallpaper.sh
+$wallpaperSelect = $scriptsDir/WallpaperSelect.sh
+$waybar = $scriptsDir/Waybar.sh
+$waybarStyle = $scriptsDir/WaybarStyles.sh
+$Wofi = $scriptsDir/Wofi.sh
+$WofiEmoji = $scriptsDir/WofiEmoji.sh
+$WofiBig = $scriptsDir/WofiBig.sh
+$WofiBeats = $scriptsDir/WofiBeats.sh 
+$Clipboard = $scriptsDir/ClipManager.sh
+$QuickEdit = $scriptsDir/QuickEdit.sh
+
+# see https://wiki.hyprland.org/Configuring/Binds/ for more
+bind = $mainMod SHIFT, C, exec, hyprctl reload
+bind = $mainMod SHIFT, D, exec, $WofiBig
+bind = $mainMod, D, exec, $Wofi
+bind = $mainMod ALT, E, exec, $WofiEmoji
+bind = $mainMod SHIFT, Q, killactive, 
+bind = $mainMod SHIFT, Space, togglefloating, 
+bind = $mainMod, F, fullscreen
+bind = $mainMod, Q, killactive,
+bind = $mainMod, Return, exec, $term
+bind = $mainMod, T, exec, $files
+bind = CTRL ALT, L, exec, $LockScreen
+bind = $mainMod CTRL, S, exec, $WofiBeats
+bind = $mainMod, W, exec, $wallpaper
+bind = $mainMod SHIFT, W, exec, $waybarStyle
+bind = $mainMod CTRL, W, exec, $wallpaperSelect
+bind = $mainMod ALT, W, exec, $ChangeLayoutMenu
+bind = $mainMod, H, exec, $Help
+bind = $mainMod, E, exec, $QuickEdit
+bind = $mainMod, B, exec, killall -SIGUSR1 waybar # Toggle hide/show waybar
+bind = $mainMod SHIFT, G, exec, $GameMode
+
+#bind = $mainMod SHIFT, M, exec, hyprctl dispatch splitratio -0.3
+#bind = $mainMod SHIFT, Y, exec, $term --class clock -T clock -e tty-clock -c -C 7 -r -s -f "%A, %B, %d"
+
+bind = $mainMod CTRL, D, layoutmsg, removemaster
+bind = $mainMod, Escape, exec, hyprctl kill
+bind = $mainMod, I, layoutmsg, addmaster
+bind = $mainMod, J, layoutmsg, cyclenext
+bind = $mainMod, K, layoutmsg, cycleprev
+bind = $mainMod, M, exec, hyprctl dispatch splitratio 0.3
+bind = $mainMod, P, pseudo, # dwindle
+bind = $mainMod CTRL, Return, layoutmsg, swapwithmaster
+bind = $mainMod, Space, exec, $ChangeLayout
+bind = $mainMod ALT, V, exec, $Clipboard
+
+# Special Keys / Hot Keys
+bind = , xf86audioraisevolume, exec, $volume --inc #volume up
+bind = , xf86audiolowervolume, exec, $volume --dec #volume down
+bind = , xf86AudioMicMute, exec, $volume --toggle-mic #mute mic
+bind = , xf86Launch1, exec, rog-control-center # ASUS Armory crate button
+bind = , xf86audiomute, exec, $volume --toggle #FN+F1
+bind = , xf86KbdBrightnessDown, exec, $kbacklight --dec #FN+F2 Keyboard brightness down
+bind = , xf86KbdBrightnessUp, exec, $kbacklight --inc #FN+F3 Keyboard brightnes up
+bind = , xf86Launch3, exec, asusctl led-mode -n #FN+F4 Switch keyboard RGB profile 
+bind = , xf86Launch4, exec, asusctl profile -n  #FN+F5 change of fan profiles (Quite, Balance Performance)
+bind = , xf86MonBrightnessDown, exec, $backlight --dec #FN+F7
+bind = , xf86MonBrightnessUp, exec, $backlight --inc #FN+F8
+bind = , xf86TouchpadToggle, exec, $touchpad #FN+10 disable touchpad
+
+
+bind = , xf86Sleep, exec, $LockScreen #FN+F11 (sleep button) 
+bind = , xf86Rfkill, exec, $AirplaneMode #Airplane mode FN+F12 
+
+# triggered when external monitor is connected and closing lid
+bindl=,switch:Lid Switch, exec, $LidSwitch
+
+bind = , xf86audioplay, exec, playerctl play-pause 
+bind = , xf86audionext, exec, playerctl next
+bind = , xf86audioprev, exec, playerctl previous
+bind = , xf86audiostop, exec, playerctl stop
+
+# From manual but it does not work
+#bindl = , switch:off:Lid Switch,ex# See https://wiki.hyprland.org/Configuring/Keywords/ for more
+# Setting variables
+$mainMod = SUPER
+$files = thunar
+$browser = firefox
+$term = foot
+$hyprDir = $HOME/.config/hypr
+$scriptsDir = $HOME/.config/hypr/scripts
+
+# Scripts
+$AirplaneMode = $scriptsDir/AirplaneMode.sh
+$backlight = $scriptsDir/Brightness.sh
+$kbacklight = $scriptsDir/BrightnessKbd.sh
+$ChangeBlur = $scriptsDir/ChangeBlur.sh
+$ChangeLayout = $scriptsDir/ChangeLayout.sh
+$ChangeLayoutMenu = $scriptsDir/ChangeLayoutMenu.sh
+$DarkLight = $scriptsDir/DarkLight.sh
+$GameMode = $scriptsDir/GameMode.sh
+$Help = $scriptsDir/Help.sh
+$LidSwitch = $scriptsDir/LidSwitch.sh
+$LockScreen = $scriptsDir/LockScreen.sh
+$Mako = $scriptsDir/Mako.sh
+$screenshot = $scriptsDir/ScreenShot.sh
+$touchpad = $scriptsDir/TouchPad.sh
+$volume = $scriptsDir/Volume.sh
+$wallpaper = $scriptsDir/Wallpaper.sh
+$wallpaperSelect = $scriptsDir/WallpaperSelect.sh
+$waybar = $scriptsDir/Waybar.sh
+$waybarStyle = $scriptsDir/WaybarStyles.sh
+$Wofi = $scriptsDir/Wofi.sh
+$WofiEmoji = $scriptsDir/WofiEmoji.sh
+$WofiBig = $scriptsDir/WofiBig.sh
+$WofiBeats = $scriptsDir/WofiBeats.sh 
+$Clipboard = $scriptsDir/ClipManager.sh
+$QuickEdit = $scriptsDir/QuickEdit.sh
+
+# see https://wiki.hyprland.org/Configuring/Binds/ for more
+bind = $mainMod SHIFT, C, exec, hyprctl reload
+bind = $mainMod SHIFT, D, exec, $WofiBig
+bind = $mainMod, D, exec, $Wofi
+bind = $mainMod ALT, E, exec, $WofiEmoji
+bind = $mainMod SHIFT, Q, killactive, 
+bind = $mainMod SHIFT, Space, togglefloating, 
+bind = $mainMod, F, fullscreen
+bind = $mainMod, Q, killactive,
+bind = $mainMod, Return, exec, $term
+bind = $mainMod, T, exec, $files
+bind = CTRL ALT, L, exec, $LockScreen
+bind = $mainMod CTRL, S, exec, $WofiBeats
+bind = $mainMod, W, exec, $wallpaper
+bind = $mainMod SHIFT, W, exec, $waybarStyle
+bind = $mainMod CTRL, W, exec, $wallpaperSelect
+bind = $mainMod ALT, W, exec, $ChangeLayoutMenu
+bind = $mainMod, H, exec, $Help
+bind = $mainMod, E, exec, $QuickEdit
+bind = $mainMod, B, exec, killall -SIGUSR1 waybar # Toggle hide/show waybar
+bind = $mainMod SHIFT, G, exec, $GameMode
+
+#bind = $mainMod SHIFT, M, exec, hyprctl dispatch splitratio -0.3
+#bind = $mainMod SHIFT, Y, exec, $term --class clock -T clock -e tty-clock -c -C 7 -r -s -f "%A, %B, %d"
+
+bind = $mainMod CTRL, D, layoutmsg, removemaster
+bind = $mainMod, Escape, exec, hyprctl kill
+bind = $mainMod, I, layoutmsg, addmaster
+bind = $mainMod, J, layoutmsg, cyclenext
+bind = $mainMod, K, layoutmsg, cycleprev
+bind = $mainMod, M, exec, hyprctl dispatch splitratio 0.3
+bind = $mainMod, P, pseudo, # dwindle
+bind = $mainMod CTRL, Return, layoutmsg, swapwithmaster
+bind = $mainMod, Space, exec, $ChangeLayout
+bind = $mainMod ALT, V, exec, $Clipboard
+
+# Special Keys / Hot Keys
+bind = , xf86audioraisevolume, exec, $volume --inc #volume up
+bind = , xf86audiolowervolume, exec, $volume --dec #volume down
+bind = , xf86AudioMicMute, exec, $volume --toggle-mic #mute mic
+bind = , xf86Launch1, exec, rog-control-center # ASUS Armory crate button
+bind = , xf86audiomute, exec, $volume --toggle #FN+F1
+bind = , xf86KbdBrightnessDown, exec, $kbacklight --dec #FN+F2 Keyboard brightness down
+bind = , xf86KbdBrightnessUp, exec, $kbacklight --inc #FN+F3 Keyboard brightnes up
+bind = , xf86Launch3, exec, asusctl led-mode -n #FN+F4 Switch keyboard RGB profile 
+bind = , xf86Launch4, exec, asusctl profile -n  #FN+F5 change of fan profiles (Quite, Balance Performance)
+bind = , xf86MonBrightnessDown, exec, $backlight --dec #FN+F7
+bind = , xf86MonBrightnessUp, exec, $backlight --inc #FN+F8
+bind = , xf86TouchpadToggle, exec, $touchpad #FN+10 disable touchpad
+
+
+bind = , xf86Sleep, exec, $LockScreen #FN+F11 (sleep button) 
+bind = , xf86Rfkill, exec, $AirplaneMode #Airplane mode FN+F12 
+
+# triggered when external monitor is connected and closing lid
+bindl=,switch:Lid Switch, exec, $LidSwitch
+
+bind = , xf86audioplay, exec, playerctl play-pause 
+bind = , xf86audionext, exec, playerctl next
+bind = , xf86audioprev, exec, playerctl previous
+bind = , xf86audiostop, exec, playerctl stop
+
+# From manual but it does not work
+#bindl = , switch:off:Lid Switch,ex

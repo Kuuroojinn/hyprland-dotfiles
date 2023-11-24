@@ -1,0 +1,50 @@
+{
+
+"include": "~/.config/hypr/waybar/modules",
+"layer": "top",
+//"mode": "dock",
+"exclusive": true,
+"passthrough": false,
+"position": "top",
+"spacing": 3,
+"fixed-center": true,
+"ipc": true,
+"margin-top": 6,
+"margin-left": 8,
+"margin-right": 8,
+
+"modules-left": [
+	"custom/menu",
+	//"wlr/workspaces",
+	"hyprland/workspaces", 
+	"cpu", 
+	"temperature", 
+	"memory",
+	//"disk", 
+	"custom/weather",
+	],
+  
+"modules-center": [
+	"cava",
+	//"custom/menu",
+	//"idle_inhibitor", 
+	"clock"
+	//"custom/waybar-media",
+	//"custom/cycle_wall",	
+	//"custom/lock",	
+	], 
+
+"modules-right": [
+	"custom/lock",
+	"cava",
+	//"hyprland/window", 
+	"tray", 
+	"battery", 
+	"backlight",
+	"pulseaudio",
+	//"wireplumber", 
+	"pulseaudio#microphone",
+	"custom/light_dark", 
+	"custom/power",
+	],
+}
