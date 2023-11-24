@@ -1,0 +1,17 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+right_format = """$username"""
+
+[character] # The name of the module we are configuring is "character"
+success_symbol = "[  ](fg:black bg:purple )[  ](bg:#313244 bold fg:purple) [](bold purple)[](bold purple)[](bold purple) [](bold purple) "
+error_symbol = "[  ](fg:black bg:purple )[  ](bg:#313244 bold fg:purple) [](bold red)[](bold red)[](bold red) [](bold red) "
+vimcmd_symbol = "[  ](fg:black bg:blue )[ NORMAL ](bg:blue bold fg:black) [](bold blue)[](bold blue)[](bold blue) [](bold blue) "
+
+[username]
+style_user = 'black bold'
+style_root = 'black bold'
+format = '[](#f2cdcd)[$user](fg:#181825 bg:#f2cdcd )[](#f2cdcd) '
+disabled = false
+show_always = false
+
+
