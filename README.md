@@ -1,3 +1,3 @@
 # hyprland-dotfiles
 
-Not finished yet
+Work in progress
